@@ -6,6 +6,7 @@ import {
 import HomeView from '../views/HomeView.vue';
 import FilterView from '../views/FilterView.vue';
 import FilterView2 from '../views/FilterView2.vue';
+import AboutView from '../views/AboutView.vue';
 
 
 const routes: RouteRecordRaw[] = [{
@@ -19,6 +20,12 @@ const routes: RouteRecordRaw[] = [{
         path: '/filter',
         name: 'Filter',
         component: FilterView2
+    },
+
+    {
+        path: '/About',
+        name: 'About',
+        component: AboutView
     }
 
 ];

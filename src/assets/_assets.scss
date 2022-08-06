@@ -1,0 +1,52 @@
+//VARS ====================================//
+//Color
+$transparent-brown:  #8a6044e1;
+$brown: #8a6044;
+$lite: #d7d1cb;
+$late: #bcaf9f;
+$lite-brown: #9b7a69;
+
+//Fonts
+$font: sans-serif;
+
+//Mixins
+@mixin flex-center($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+//General
+body {
+    font-family: $font;
+  }
+  
+  h1 {
+    line-height: 30px;
+    font-family: $font;
+  }
+  
+  h3 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: $font;
+    margin-top: 0px;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: $font;
+  }
+
+  p {
+    font-family: $font;
+    margin: 0px;
+  }
+
+  a{
+    font-family: $font;
+  }
+
+  
