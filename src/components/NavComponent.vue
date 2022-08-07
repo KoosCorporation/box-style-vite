@@ -1,27 +1,27 @@
 <template lang="">
   <nav>
-    <button class="nav-button">
+    <button  class="nav-button" @click = "Toggle">
       <div class="button-line"></div>
       <div class="button-line2"></div>
     </button>
 
-    <ul class="nav-links">
+    <ul class="nav-links" :class ="toggle">
       <div class="nav-info__container">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="HTML/info.html">ABOUT</a></li>
+        <li :class = "navLinksLi"><a href="#">INICIO</a></li>
+        <li :class = "navLinksLi"><a href="HTML/info.html">ABOUT</a></li>
       </div>
       <div class="nav-links__container">
         <div class="li-card">
-          <li><a href="#">Mujer</a></li>
+          <li :class = "navLinksLi"><a href="#">Mujer</a></li>
         </div>
 
         <div class="li-card">
-          <li><a href="#">Hombre</a></li>
+          <li :class = "navLinksLi"><a href="#">Hombre</a></li>
         </div>
 
         <!-- Animated Category // -->
         <div class="li-card__duo">
-          <li class="li-card__duo-tittle"><a href="#">Accesorios</a></li>
+          <li :class = "navLinksLi" class="li-card__duo-tittle"><a href="#">Accesorios</a></li>
           <div class="card-duo__child">
             <a href="#" class="a-card__duo-child">Mujer</a> /
             <a href="#" class="a-card__duo-child">Hombre</a>
@@ -30,7 +30,7 @@
 
         <!-- Animated Category // -->
         <div class="li-card__duo">
-          <li class="li-card__duo-tittle"><a href="#">Calzado</a></li>
+          <li :class = "navLinksLi" class="li-card__duo-tittle"><a href="#">Calzado</a></li>
           <div class="card-duo__child">
             <a href="#" class="a-card__duo-child">Mujer</a> /
             <a href="#" class="a-card__duo-child">Hombre</a>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="li-card">
-          <li><a href="#">Thrift Flip</a></li>
+          <li :class = "navLinksLi"><a href="#">Thrift Flip</a></li>
         </div>
       </div>
 
@@ -81,36 +81,32 @@
     </ul>
   </nav>
 </template>
-<script setup lang="ts">
-// const hamburger = document.querySelector(".nav-button");
-// const navLinks = document.querySelector(".nav-links");
-// const links = document.querySelectorAll(".nav-links li");
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
 
+data(){
+  return {
+   navLinks: "nav-links",
+    toggle: "",
+   isOpen: false
+  }
+},
 
-// // cardDuo Poup 
-// var cardDuo  = document.getElementsByClassName("li-card__duo-tittle");
-// var cardDuoChild = document.getElementsByClassName("card-duo__child");
-// var cardBigger = document.getElementsByClassName("li-card__duo");
+methods: {
+  
+ Toggle(){
+  if(this.isOpen == false){
+    this.toggle = 'open';
+    this.isOpen = true
+  } else {
+    this.toggle = ""
+    this.isOpen = false
+  }
+ }
+}
 
-
-
-
-// hamburger?.addEventListener("click", () => {
-//   navLinks?.classList.toggle("open");
-//   links.forEach(link => {
-//     link.classList.toggle("fade");
-//   });
-// });
-
-// for (let i = 0; i < 2; i++) {
-//   cardDuo[i].addEventListener("click",() => {
-//     console.log("se clickio la card duo.")
-//     cardDuo[i].classList.toggle("moveTittle");
-//     cardBigger[i].classList.toggle("cardBigger")
-//     cardDuoChild[i].classList.toggle("openChild");
-//   }
-//    )
-// }
+})
 </script>
 <style lang="scss" scoped>
 @import '../assets/assets';
@@ -268,7 +264,7 @@ nav {
 }
 
 .nav-links li {
-  opacity: 0;
+  opacity: 1;
 }
 
 .nav-links li a {
