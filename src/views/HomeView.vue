@@ -29,12 +29,27 @@
       <!-- All Products // ================================== -->
       <div class="cont-products">
         <!-- Product // -------------------------------- -->
+        <router-link :to="`/Products/product/${product.id}`"  v-for="(product, index) in productsGeted"
+          :key="index">
+        <ProductComponent class="productComponente"  :product="product" />
+      </router-link>
       </div>
     </main>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {
+  ref
+} from 'vue'
+import {
+  getProducts
+} from '../stores/products'
+import ProductComponent from '../components/ProductComponent.vue';
+
+let productsGeted = ref(getProducts().getNewProducts())
+
+</script>
 
 <style lang="scss" scoped>
 @import '../assets/assets';

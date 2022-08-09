@@ -30,7 +30,7 @@
 
         <!-- Animated Category // -->
         <div class="li-card__duo">
-          <li  class="li-card__duo-tittle"><a href="#">Calzado</a></li>
+          <li  class="li-card__duo-tittle"><router-link to="/Products/Calzado">Calzado</router-link></li>
           <div class="card-duo__child">
             <a href="#" class="a-card__duo-child">Mujer</a> /
             <a href="#" class="a-card__duo-child">Hombre</a>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="li-card">
-          <li ><a href="#">Thrift Flip</a></li>
+          <li ><router-link to="/Products/Thrift_Flip">Thrift Flip</router-link></li>
         </div>
       </div>
 
@@ -109,7 +109,9 @@ methods: {
 },
 watch:{
   $route(newRoute, oldRoute){
-    this.Toggle()
+    if (this.toggle == 'open'){
+      this.Toggle()
+    }
   }
 }
 

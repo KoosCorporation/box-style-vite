@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Filtro de categorias</h1>
-    <h1>Filtro de 2</h1>
     <h1>{{props.categoryRoute}}</h1>
     <h1>categories geted {{categoriesGeted.categoryValues}}</h1>
     <div class="CategoriesComponent_filters">
@@ -9,18 +8,16 @@
         @click="filtrando(category)">{{category}}</button>
     </div>
     <div class="CategoriesComponent_products">
-      <ProductComponent class="productComponente" categoryRoute="hodi" v-for="(product, index) in productsGeted" :key="index"
-        :product="product" />
+      <router-link :to="`/Products/product/${product.id}`"  v-for="(product, index) in productsGeted"
+          :key="index">
+        <ProductComponent class="productComponente"  :product="product" />
+      </router-link>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
   import {
-    ref,
-    watch,
-    onMounted,
-    onBeforeMount,
-    
+    ref
   } from 'vue'
   import {
     getProducts
@@ -62,7 +59,8 @@
 <style lang="css">
 
 .CategoriesComponent_products{
-  display: flex;
+  display: grid;
+  grid-column: 2;
 }
 
 .productComponente{

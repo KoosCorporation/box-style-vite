@@ -8,6 +8,7 @@ import FilterView from '../views/FilterView.vue';
 import FilterView2 from '../views/FilterView2.vue';
 import AboutView from '../views/AboutView.vue';
 import Productsview from '../views/Productsview.vue';
+import SingleProductView from '../views/SingleProductView.vue';
 
 
 const routes: RouteRecordRaw[] = [{
@@ -32,6 +33,11 @@ const routes: RouteRecordRaw[] = [{
         path: '/Products/:category',
         name: 'Products',
         component: Productsview
+    },
+    {
+        path: '/Products/product/:id',
+        name: 'SingleProduct',
+        component: SingleProductView
     }
 
 ];
