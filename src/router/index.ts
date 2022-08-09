@@ -7,6 +7,7 @@ import HomeView from '../views/HomeView.vue';
 import FilterView from '../views/FilterView.vue';
 import FilterView2 from '../views/FilterView2.vue';
 import AboutView from '../views/AboutView.vue';
+import Productsview from '../views/Productsview.vue';
 
 
 const routes: RouteRecordRaw[] = [{
@@ -26,6 +27,11 @@ const routes: RouteRecordRaw[] = [{
         path: '/About',
         name: 'About',
         component: AboutView
+    },
+    {
+        path: '/Products/:category',
+        name: 'Products',
+        component: Productsview
     }
 
 ];
@@ -35,3 +41,4 @@ const router = createRouter({
     routes
 });
 export default router;
+

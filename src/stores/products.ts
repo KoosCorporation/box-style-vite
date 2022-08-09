@@ -9,33 +9,37 @@ export const getProducts = defineStore('products', {
             products: [{
                     title: 'camisa',
                     category: 'Blusa',
-                    pito: 10
+                    precio: 10
                 },
                 {
                     title: 'Top',
                     category: 'Blusa',
-                    pito: 9
+                    precio: 10.13
                 },
                 {
                     title: 'Jean',
                     category: 'Pants',
-                    pito: 0
+                    precio: 1.5
                 },
                 {
                     title: 'Short',
-                    category: 'Pants'
+                    category: 'Pants',
+                    precio: 3.98
                 },
                 {
                     title: 'Necklace',
-                    category: 'Joyeria'
+                    category: 'Joyeria',
+                    precio: 4.2
                 },
                 {
                     title: 'Bracelet',
-                    category: 'Joyeria'
+                    category: 'Joyeria',
+                    precio: 7.0
                 },
                 {
                     title: 'Elden Ring',
-                    category: 'Joyeria'
+                    category: 'Joyeria',
+                    precio: 1.1
                 },
 
             ],
@@ -109,7 +113,17 @@ export const getProducts = defineStore('products', {
                     "gender": "Male",
                     "precio": 31.96
                 }
-            ]
+            ],
+            categoriesRoute: [{
+                    categoriesOf: 'Mujer',
+                    categoryValues: ['Blusa', 'Faldas', 'Pants', 'Joyeria'],
+                },
+                {
+                    categoriesOf: 'Hombre',
+                    categoryValues: ['a', 'b', 'c', 'd', 'e']
+                },
+            ],
+            productsFiltered:[]
         }
     },
     // could also be defined as
@@ -118,5 +132,17 @@ export const getProducts = defineStore('products', {
         increment() {
             this.count++
         },
+        filterProducts(filtro: string) {
+            const filtered = this.products.filter((elemento: any) => {
+                return elemento.category === filtro
+            })
+            return filtered
+        },
+        getCategoryRoute(category: string | string[]) {
+            const categoryGeted = this.categoriesRoute.filter((element: any) => {
+                return element.categoriesOf === category
+            })
+            return categoryGeted[0]
+        }
     },
 })

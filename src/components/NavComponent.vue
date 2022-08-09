@@ -7,21 +7,21 @@
 
     <ul class="nav-links" :class ="toggle">
       <div class="nav-info__container">
-        <li :class = "navLinksLi"><a href="#">INICIO</a></li>
-        <li :class = "navLinksLi"><a href="HTML/info.html">ABOUT</a></li>
+        <li  ><router-link to="/">INICIO</router-link></li>
+        <li ><router-link to="/About">ABOUT</router-link></li>
       </div>
       <div class="nav-links__container">
         <div class="li-card">
-          <li :class = "navLinksLi"><a href="#">Mujer</a></li>
+          <li  ><router-link to = "/Products/Mujer">Mujer</router-link></li>
         </div>
 
         <div class="li-card">
-          <li :class = "navLinksLi"><a href="#">Hombre</a></li>
+          <li ><router-link to="/Products/Hombre">Hombre</router-link></li>
         </div>
 
         <!-- Animated Category // -->
         <div class="li-card__duo">
-          <li :class = "navLinksLi" class="li-card__duo-tittle"><a href="#">Accesorios</a></li>
+          <li class="li-card__duo-tittle"><router-link to="/Products/Accesorios">Accesorios</router-link></li>
           <div class="card-duo__child">
             <a href="#" class="a-card__duo-child">Mujer</a> /
             <a href="#" class="a-card__duo-child">Hombre</a>
@@ -30,7 +30,7 @@
 
         <!-- Animated Category // -->
         <div class="li-card__duo">
-          <li :class = "navLinksLi" class="li-card__duo-tittle"><a href="#">Calzado</a></li>
+          <li  class="li-card__duo-tittle"><a href="#">Calzado</a></li>
           <div class="card-duo__child">
             <a href="#" class="a-card__duo-child">Mujer</a> /
             <a href="#" class="a-card__duo-child">Hombre</a>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="li-card">
-          <li :class = "navLinksLi"><a href="#">Thrift Flip</a></li>
+          <li ><a href="#">Thrift Flip</a></li>
         </div>
       </div>
 
@@ -83,13 +83,14 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
 
 data(){
   return {
    navLinks: "nav-links",
-    toggle: "",
-   isOpen: false
+    toggle: "open",
+   isOpen: true,
   }
 },
 
@@ -103,8 +104,15 @@ methods: {
     this.toggle = ""
     this.isOpen = false
   }
- }
+ },
+ 
+},
+watch:{
+  $route(newRoute, oldRoute){
+    this.Toggle()
+  }
 }
+
 
 })
 </script>
@@ -165,7 +173,7 @@ nav {
   flex-direction: column;
   clip-path: circle(100px at 90% -10%);
   -webkit-clip-path: circle(100px at 100% -10%);
-  transition: 0.7s ease-out;
+  transition: 0.2s ease-out;
   pointer-events: none;
   transform: translateY(-12px);
 

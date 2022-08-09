@@ -50,15 +50,13 @@ export default defineComponent({
       if (this.filterPressedControl == true || this.filterSelected != filtro){
         this.filterSelected = filtro
         this.productsGeted = getProducts().products
-        this.productsGeted = this.productsGeted.filter((elemento: any)=> {
-            return elemento.category === filtro
-            })
+        this.productsGeted = getProducts().filterProducts(filtro)
         this.filterPressedControl = false
       }else{
         this.productsGeted = getProducts().products
         this.filterPressedControl = true
       } 
-    console.log(this.productsGeted)
+    
     return this.productsGeted
     },
 

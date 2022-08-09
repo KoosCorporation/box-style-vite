@@ -14,7 +14,7 @@
         </h1>
 
         <div class="saber-mas">
-          <a href="HTML/info.html">saber mas</a>
+          <router-link to="/About">saber mas</router-link>
         </div>
       </div>
     </header>
