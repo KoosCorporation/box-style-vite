@@ -25,13 +25,13 @@
         <div class="bar"></div>
       </div>
 
-      <h1>Lo Nuevo</h1>
+      <h1 class="new-arrival__title">New Arrival</h1>
       <!-- All Products // ================================== -->
-      <div class="cont-products">
+      <div class="new-arrival__cont-products">
         <!-- Product // -------------------------------- -->
         <router-link :to="`/Products/product/${product.id}`"  v-for="(product, index) in productsGeted"
           :key="index">
-        <ProductComponent class="productComponente"  :product="product" />
+        <ProductComponent   :product="product" />
       </router-link>
       </div>
     </main>
@@ -130,11 +130,15 @@ header {
 main {
   height: 1500px;
   border-radius: 30px 30px 0px 0px;
-  padding: 20px;
+  padding: 20px 0px;
   background-color: white;
   transform: translateY(600px);
   position: relative;
   overscroll-behavior: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
 
   .cont-bar {
   display: flex;
@@ -148,6 +152,22 @@ main {
   height: 5px;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.144);
+}
+
+.new-arrival__title {
+  align-self: flex-start;
+  margin-bottom: 20px;
+margin-left: 15px;
+}
+
+.new-arrival__cont-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: space-around;
+  align-self: center;
+  width: 95%;
+  
 }
 }
 

@@ -11,7 +11,7 @@ export const getProducts = defineStore('products', {
                 "title": "Joseph",
                 "category": "Nissan",
                 "precio": 5.05,
-                "imageRoute": "http://dummyimage.com/171x100.png/ff4444/ffffff",
+                "imageRoute": "../assets/img/products/product-1.png",
                 "new": false
               }, {
                 "id": 2,
@@ -39,7 +39,7 @@ export const getProducts = defineStore('products', {
                 "title": "Mick",
                 "category": "Ford",
                 "precio": 4.75,
-                "imageRoute": "http://dummyimage.com/176x100.png/dddddd/000000",
+                "imageRoute": "@src/assets/img/products/product-1.png",
                 "new": true
               }, {
                 "id": 6,
@@ -165,7 +165,7 @@ export const getProducts = defineStore('products', {
                 },
                 {
                     categoriesOf: 'Thrift_Flip',
-                    categoryValues: ['Volkswagen', 'Kia', 'Mazda', 'Aston Martin', 'Plymouth']
+                    categoryValues: ['Volkswagen', 'Kia', 'Mazda', 'Aston Martin', 'Plymouth', 'Pito', 'Pito Meteorico']
                 },
             ],
             productsFiltered:[]
