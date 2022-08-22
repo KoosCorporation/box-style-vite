@@ -128,7 +128,7 @@ header {
 }
 
 main {
-  height: 1500px;
+  height: auto;
   border-radius: 30px 30px 0px 0px;
   padding: 20px 0px;
   background-color: white;
