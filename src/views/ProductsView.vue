@@ -11,5 +11,7 @@ import CategoriesComponent from "../components/CategoriesComponent.vue";
 const params =  useRoute().params
 </script>
 <style lang="scss" scoped>
+
+
     
 </style>
