@@ -29,7 +29,7 @@
       <!-- All Products // ================================== -->
       <div class="new-arrival__cont-products">
         <!-- Product // -------------------------------- -->
-        <router-link :to="`/Products/product/${product.id}`"  v-for="(product, index) in productsGeted"
+        <router-link class="router-link" :to="`/Products/product/${product.id}`"  v-for="(product, index) in productsGeted"
           :key="index">
         <ProductComponent   :product="product" />
       </router-link>
@@ -53,6 +53,8 @@ let productsGeted = ref(getProducts().getNewProducts())
 
 <style lang="scss" scoped>
 @import '../assets/assets';
+
+
 
 
 // header -------------------

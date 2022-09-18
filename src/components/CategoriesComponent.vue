@@ -28,7 +28,7 @@
         v-for="(product, index) in productsGeted"
         :key="index"
       >
-        <ProductComponent class="productComponente" :product="product" />
+        <ProductComponent :product="product" />
       </router-link>
     </div>
   </div>
@@ -87,10 +87,5 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
   grid-column: 2;
 }
 
-.productComponente {
-  border-style: solid;
-  border-width: 1px;
-  margin: 5px;
-  border-radius: 10px;
-}
+
 </style>
