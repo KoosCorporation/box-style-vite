@@ -4,7 +4,7 @@
 
 import NavComponent from './components/NavComponent.vue'
 </script>
-
+  
 <template>
   <nav-component></nav-component>
   <router-view :key="$route.path"></router-view>

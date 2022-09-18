@@ -177,13 +177,13 @@ nav {
   -webkit-clip-path: circle(100px at 100% -10%);
   transition: 0.2s ease-out;
   pointer-events: none;
-  transform: translateY(-12px);
+  transform: translateY(-35px);
 
   z-index: 9;
 }
 
 .nav-links.open {
-  clip-path: circle(1500px at 90% -10%);
+  clip-path: circle(1000px at 90% -10%);
   -webkit-clip-path: circle(1000px at 90% -10%);
   pointer-events: all;
   opacity: 1;
@@ -283,33 +283,7 @@ nav {
   font-size: 20px;
 }
 
-.nav-links li:nth-child(1) {
-  transition: all 0.3s ease 0.2s;
-}
 
-.nav-links li:nth-child(2) {
-  transition: all 0.3s ease 0.3s;
-}
-
-.nav-links li:nth-child(3) {
-  transition: all 0.3s ease 0.4s;
-}
-
-.nav-links li:nth-child(4) {
-  transition: all 0.3s ease 0.5s;
-}
-
-.nav-links li:nth-child(5) {
-  transition: all 0.3s ease 0.6s;
-}
-
-.nav-links li:nth-child(6) {
-  transition: all 0.3s ease 0.7s;
-}
-
-li.fade {
-  opacity: 1;
-}
 
 /* nav-rs // */
 .nav-rs {
