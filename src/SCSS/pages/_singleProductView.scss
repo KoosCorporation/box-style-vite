@@ -8,9 +8,11 @@
     
 .SingleProductView__container {
     width: 95%;
-    padding: 10% 0;
+    padding: 5% 0;
     min-width: 320px;
+    max-width: 600px;
     @include flex(column, center);
+    gap: .5em;
 
     .SingleProductView__container-contImg {
         @include flex-center;
@@ -30,8 +32,28 @@
     }
 
     .SingleProductView__container-contPreview {
-        @include flex-around(row);
-        width: 90%;
+        @include flex-between(row);
+        width: 95%;
+        max-width: 400px;
+        
+        
+
+        .SingleProductView__container-contPreview-contImg {
+          @extend .SingleProductView__container-contImg;
+          padding: 2%;
+          width: auto;
+          border-radius: 7px;
+
+          .SingleProductView__container-contPreview-img {
+            width: auto;
+            height: auto;
+            background: $lite;
+            padding: 2%;
+            border-radius: 7px;
+           @include cont-img(70px, 70px, contain);
+          }
+          
+        }
 
 
     }

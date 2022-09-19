@@ -15,7 +15,27 @@
 
             <div class="SingleProductView__container-contPreview">
                 <div class="SingleProductView__container-contPreview-contImg">
+                    <div class="SingleProductView__container-contPreview-img">
+                        <img src="../assets/img/products/product-1.png">
+                    </div>
+                </div>
 
+                <div class="SingleProductView__container-contPreview-contImg">
+                    <div class="SingleProductView__container-contPreview-img">
+                        <img src="../assets/img/products/product-1.png">
+                    </div>
+                </div>
+
+                <div class="SingleProductView__container-contPreview-contImg">
+                    <div class="SingleProductView__container-contPreview-img">
+                        <img src="../assets/img/products/product-1.png">
+                    </div>
+                </div>
+
+                <div class="SingleProductView__container-contPreview-contImg">
+                    <div class="SingleProductView__container-contPreview-img">
+                        <img src="../assets/img/products/product-1.png">
+                    </div>
                 </div>
             </div>  
             </div>
