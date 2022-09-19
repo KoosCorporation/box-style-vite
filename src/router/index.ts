@@ -19,12 +19,6 @@ const routes: RouteRecordRaw[] = [{
 
     },
     {
-        path: '/filter',
-        name: 'Filter',
-        component: FilterView2
-    },
-
-    {
         path: '/About',
         name: 'About',
         component: AboutView

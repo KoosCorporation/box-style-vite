@@ -101,8 +101,12 @@
 </template>
 <script setup lang="ts">
 </script>
+
+
+
+
 <style lang="scss" scoped>
-@import '../assets/assets';
+@use '../SCSS/abstract' as *;
 /* Footer // ================================================*/
 footer {
   width: 100%;
