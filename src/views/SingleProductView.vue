@@ -14,6 +14,7 @@ import { getProducts } from '../stores/products'
 const params = useRoute().params
 const singelProductGeted = getProducts().getProducById(Number(params.id))
 </script>
-<style lang="css">
+<style lang="scss">
+    @use '../SCSS/abstract' as *;
     
 </style>

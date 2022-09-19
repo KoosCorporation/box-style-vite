@@ -56,7 +56,7 @@ import FooterComponent from '../components/FooterComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/assets';
+@use '../SCSS/abstract' as *;
 
 /* main information // ===================== */
 .info-container {
