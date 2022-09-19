@@ -1,10 +1,5 @@
 <template>
   <div class="Product">
-        
-        <!-- <h1>{{props.product?.category}}</h1>
-        
-        <h1>{{props.product?.new}}</h1> --> -->
-
     <!-- product-top -->
     <div class="product-top">
       <div class="product-top__container">
