@@ -25,21 +25,24 @@
 
     <!-- Categories section -->
     <div class="categories__container_2">
-      <div class="categories__container_2-each-2">
+      
         <div class="categories__container_2-item"
-              >
-          shit
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
         </div>
-        <div class="categories__container_2-item">
-          shit2
+        
+        <!-- just for production to see how it looks with many items -->
+        <div class="categories__container_2-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
         </div>
-        <div class="categories__container_2-item">
-          shit2
+        <div class="categories__container_2-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
         </div>
-        <div class="categories__container_2-item">
-          shit2
-        </div>
-      </div>
     </div>
 
 
@@ -93,22 +96,20 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
   width: 100vw;
   height: 200px;
   background-color: green;
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15%;
+  overflow-x: auto;
+  
+}
 
-}
-.categories__container_2-each-2{
-  width: 200px;
-  height: 100px;
-  background-color: pink;
-  display: grid;
-  grid-template-columns: 100px 100px ;
-  grid-template-rows: 50px 50px ;
-  gap: 7px;
-}
 .categories__container_2-item{
   width: 60px;
-  height: 30px;
+  height: 40%;
   background-color: red;
+  white-space: nowrap;
 }
 
 // Aqui terminan los que podes borrar a la chingada
