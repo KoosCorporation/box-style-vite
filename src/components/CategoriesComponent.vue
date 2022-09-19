@@ -22,6 +22,30 @@
       <!-- --------------------------------------------------- -->
 
     </div>
+
+    <!-- Categories section -->
+    <div class="categories__container_2">
+      
+        <div class="categories__container_2-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+        
+        <!-- just for production to see how it looks with many items -->
+        <div class="categories__container_2-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+        <div class="categories__container_2-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+    </div>
+
+
     <div class="CategoriesComponent_products">
       <router-link
         :to="`/Products/product/${product.id}`"
@@ -66,6 +90,29 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
 </script>
 
 <style lang="scss" scoped>
+
+// Estos estilos borralos a la chingada
+.categories__container_2{
+  width: 100vw;
+  height: 200px;
+  background-color: green;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15%;
+  overflow-x: auto;
+  
+}
+
+.categories__container_2-item{
+  width: 60px;
+  height: 40%;
+  background-color: red;
+  white-space: nowrap;
+}
+
+// Aqui terminan los que podes borrar a la chingada
 
 .categories__container {
   width: 100%;
