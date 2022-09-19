@@ -1,0 +1,49 @@
+@use '../abstract' as *;
+
+.SingleProductView {
+    width: 100%;
+    @include flex-center;
+    padding: 10% 0;
+   
+    
+.SingleProductView__container {
+    width: 95%;
+    padding: 10% 0;
+    min-width: 320px;
+    @include flex(column, center);
+
+    .SingleProductView__container-contImg {
+        @include flex-center;
+        width: 100%;
+        padding: 10% 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: $shadow;
+        .SingleProductView__container-contImg-inside {
+            width: 90%;
+            height: 93%;
+            background: $lite;
+            border-radius: 12px;
+           @include cont-img(100%, 450px, contain);
+           
+        }
+    }
+
+    .SingleProductView__container-contPreview {
+        @include flex-around(row);
+        width: 90%;
+
+
+    }
+
+  
+
+  
+
+    
+
+
+    
+}
+
+}

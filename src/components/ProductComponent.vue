@@ -49,9 +49,7 @@ const props = defineProps<{
   flex-direction: column;
   background: white;
   align-items: center;
-  box-shadow: 8px 7px 5px -3px rgba(0, 0, 0, 0.16);
-  -webkit-box-shadow: 8px 7px 5px -3px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 8px 7px 5px -3px rgba(0, 0, 0, 0.16);
+  box-shadow: $shadow;
   
 
 /* product-top */
