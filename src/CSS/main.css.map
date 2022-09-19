@@ -1,1 +1,1 @@
-{"version":3,"sources":["../SCSS/vendors/_normalize.scss","../SCSS/base/_generals.scss"],"names":[],"mappings":"AAAA,EACE,UAAA,CACA,WAAA,CACA,qBAAA,CCDF,aACI,oBAAA","file":"main.css"}
+{"version":3,"sources":["../SCSS/vendors/_normalize.scss","../SCSS/base/_generals.scss","../SCSS/abstract/_vars.scss"],"names":[],"mappings":"AAAA,EACE,UAAA,CACA,WAAA,CACA,qBAAA,CCCF,KACI,sBCIG,CDDL,GACE,gBAAA,CACA,sBCDG,CDIL,GACE,cAAA,CACA,eAAA,CACA,sBCPG,CDQH,cAAA,CAGF,GACE,cAAA,CACA,iBAAA,CACA,sBCdG,CDiBL,EACE,sBClBG,CDmBH,UAAA,CAGF,EACE,sBCvBG,CD2BP,aACI,oBAAA","file":"main.css"}

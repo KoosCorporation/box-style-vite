@@ -119,7 +119,7 @@ watch:{
 })
 </script>
 <style lang="scss" scoped>
-@import '../assets/assets';
+@use '../SCSS/abstract' as *;
 
 .nav-button {
   position: fixed;

@@ -38,7 +38,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/assets";
+@use '../SCSS/abstract' as *;
 
 .Product {
   width: 175px;

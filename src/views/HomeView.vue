@@ -52,7 +52,7 @@ let productsGeted = ref(getProducts().getNewProducts())
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/assets';
+@use '../SCSS/abstract' as *;
 
 
 
@@ -109,7 +109,7 @@ header {
   .saber-mas {
 
     //includes
-    @include flex-center(row);
+    @include flex-center();
 
     width: 160px;
     height: 50px;
