@@ -4,45 +4,34 @@
     <h1>{{ props.categoryRoute }}</h1>
     <h1>categories geted {{ categoriesGeted.categoryValues }}</h1>
     
-    <div class="categories__container">
-      <!-- //Botones de Categoiras // -------------------------  -->
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <!-- <button
-        class="categories-button"
-        v-for="(category, index) in categoriesGeted.categoryValues"
-        :key="index"
-        @click="filtrando(category)"
-      >
-        {{ category }}
-      </button> -->
-      <!-- --------------------------------------------------- -->
-
-    </div>
-
+  
     <!-- Categories section -->
-    <div class="categories__container_2">
+    <div class="categories__container">
       
-        <div class="categories__container_2-item"
+        <div class="categories__container-item"
         v-for="(category, index) in categoriesGeted.categoryValues"
         :key="index">
           {{category}}
         </div>
         
         <!-- just for production to see how it looks with many items -->
-        <div class="categories__container_2-item"
+        <div class="categories__container-item"
         v-for="(category, index) in categoriesGeted.categoryValues"
         :key="index">
           {{category}}
         </div>
-        <div class="categories__container_2-item"
+        <div class="categories__container-item"
         v-for="(category, index) in categoriesGeted.categoryValues"
         :key="index">
           {{category}}
         </div>
+
+        <div class="categories__container-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+        
     </div>
 
 
@@ -91,48 +80,7 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
 
 <style lang="scss" scoped>
 
-// Estos estilos borralos a la chingada
-.categories__container_2{
-  width: 100vw;
-  height: 200px;
-  background-color: green;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 15%;
-  overflow-x: auto;
-  
-}
 
-.categories__container_2-item{
-  width: 60px;
-  height: 40%;
-  background-color: red;
-  white-space: nowrap;
-}
-
-// Aqui terminan los que podes borrar a la chingada
-
-.categories__container {
-  width: 100%;
-  height: 200px;
-  background: blue;
-  
-  overflow-x: scroll;
-  position: relative;
-}
-
-.categories-button {
-  width: 200px;
-  height: 70px;
-  background: red;
-}
-
-.CategoriesComponent_products {
-  display: grid;
-  grid-column: 2;
-}
 
 
 </style>
