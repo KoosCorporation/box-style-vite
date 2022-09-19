@@ -20,23 +20,15 @@
         </div>
 
         <!-- Animated Category // -->
-        <div class="li-card__duo">
-          <li class="li-card__duo-tittle"><router-link to="/Products/Accesorios">Accesorios</router-link></li>
-          <div class="card-duo__child">
-            <a href="#" class="a-card__duo-child">Mujer</a> /
-            <a href="#" class="a-card__duo-child">Hombre</a>
-          </div>
+        <div class="li-card">
+          <li ><router-link to="/Products/Accesorios">Accesorios</router-link></li>
         </div>
-
+        
         <!-- Animated Category // -->
-        <div class="li-card__duo">
-          <li  class="li-card__duo-tittle"><router-link to="/Products/Calzado">Calzado</router-link></li>
-          <div class="card-duo__child">
-            <a href="#" class="a-card__duo-child">Mujer</a> /
-            <a href="#" class="a-card__duo-child">Hombre</a>
-          </div>
+        <div class="li-card">
+          <li ><router-link to="/Products/Calzado">Calzado</router-link></li>
         </div>
-
+     
         <div class="li-card">
           <li ><router-link to="/Products/Thrift_Flip">Thrift Flip</router-link></li>
         </div>
