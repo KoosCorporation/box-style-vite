@@ -22,6 +22,27 @@
       <!-- --------------------------------------------------- -->
 
     </div>
+
+    <!-- Categories section -->
+    <div class="categories__container_2">
+      <div class="categories__container_2-each-2">
+        <div class="categories__container_2-item"
+              >
+          shit
+        </div>
+        <div class="categories__container_2-item">
+          shit2
+        </div>
+        <div class="categories__container_2-item">
+          shit2
+        </div>
+        <div class="categories__container_2-item">
+          shit2
+        </div>
+      </div>
+    </div>
+
+
     <div class="CategoriesComponent_products">
       <router-link
         :to="`/Products/product/${product.id}`"
@@ -66,6 +87,31 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
 </script>
 
 <style lang="scss" scoped>
+
+// Estos estilos borralos a la chingada
+.categories__container_2{
+  width: 100vw;
+  height: 200px;
+  background-color: green;
+  padding: 30px;
+
+}
+.categories__container_2-each-2{
+  width: 200px;
+  height: 100px;
+  background-color: pink;
+  display: grid;
+  grid-template-columns: 100px 100px ;
+  grid-template-rows: 50px 50px ;
+  gap: 7px;
+}
+.categories__container_2-item{
+  width: 60px;
+  height: 30px;
+  background-color: red;
+}
+
+// Aqui terminan los que podes borrar a la chingada
 
 .categories__container {
   width: 100%;
