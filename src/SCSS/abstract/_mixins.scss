@@ -1,5 +1,36 @@
+//Flex Box //
 @mixin flex-center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $align;
+  align-items: center;
+}
+
+@mixin flex-between($direction) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+@mixin flex-around($direction) {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+@mixin cont-img($width, $height, $object) {
+  @include flex-center();
+  img {
+    width: $width;
+    height: $height;
+    object-fit: $object;
+  }
 }
