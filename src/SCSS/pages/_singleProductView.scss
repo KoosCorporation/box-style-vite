@@ -1,71 +1,96 @@
-@use '../abstract' as *;
+@use "../abstract" as *;
 
 .SingleProductView {
-    width: 100%;
-    @include flex-center;
-    padding: 10% 0;
-   
-    
-.SingleProductView__container {
+  width: 100%;
+  @include flex(column, center);
+  padding: 10% 0;
+
+  .SingleProductView__container {
     width: 95%;
     padding: 5% 0;
     min-width: 320px;
     max-width: 600px;
     @include flex(column, center);
-    gap: .5em;
+    gap: 0.5em;
 
     .SingleProductView__container-contImg {
-        @include flex-center;
-        width: 100%;
-        padding: 10% 0;
-        // background: white;
+      @include flex-center;
+      width: 100%;
+      padding: 10% 0;
+      // background: white;
+      border-radius: 12px;
+      box-shadow: $shadow;
+      .SingleProductView__container-contImg-inside {
+        width: 90%;
+        height: 93%;
+        background: $lite;
         border-radius: 12px;
-        box-shadow: $shadow;
-        .SingleProductView__container-contImg-inside {
-            width: 90%;
-            height: 93%;
-            background: $lite;
-            border-radius: 12px;
-           @include cont-img(100%, 450px, contain);
-           
-        }
+        @include cont-img(100%, 450px, contain);
+      }
     }
 
     .SingleProductView__container-contPreview {
-        @include flex-between(row);
-        width: 95%;
-        max-width: 400px;
-        
-        
+      @include flex-between(row);
+      width: 95%;
+      max-width: 400px;
 
-        .SingleProductView__container-contPreview-contImg {
-          @extend .SingleProductView__container-contImg;
-          padding: 2%;
+      .SingleProductView__container-contPreview-contImg {
+        @extend .SingleProductView__container-contImg;
+        padding: 2%;
+        width: auto;
+        border-radius: 7px;
+
+        .SingleProductView__container-contPreview-img {
           width: auto;
+          height: auto;
+          background: $lite;
+          padding: 2%;
           border-radius: 7px;
+          @include cont-img(70px, 70px, contain);
+        }
+      }
+    }
+  }
 
-          .SingleProductView__container-contPreview-img {
-            width: auto;
-            height: auto;
-            background: $lite;
-            padding: 2%;
-            border-radius: 7px;
-           @include cont-img(70px, 70px, contain);
-          }
-          
+  .SingleProductView__cont-info {
+    width: 90%;
+    height: 500px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+        font-size: $M;
+    }
+
+    p {
+        font-size: $S;
+    }
+
+    .SingleProductView__cont-info-Bottom {
+        width: 100%;
+        @include flex-between(row);
+
+        .SingleProductView_Size {
+            font-size: $S;
+            padding: 10px 25px;
+            background: $lite-brown;
+            border-radius: 12px;
+            color: white;
+            
+
+            span {
+                font-size: $S;
+                font-weight: bold;
+            }
+        }
+
+        h2 {
+            font-size: $M;
         }
 
 
     }
-
-  
-
-  
-
-    
-
-
-    
-}
-
+  }
 }

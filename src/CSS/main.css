@@ -61,6 +61,7 @@ html {
 .SingleProductView {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10% 0;
@@ -128,6 +129,41 @@ html {
   height: 70px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.SingleProductView .SingleProductView__cont-info {
+  width: 90%;
+  height: 500px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.SingleProductView .SingleProductView__cont-info h1 {
+  font-size: 30px;
+}
+.SingleProductView .SingleProductView__cont-info p {
+  font-size: 20px;
+}
+.SingleProductView .SingleProductView__cont-info .SingleProductView__cont-info-Bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.SingleProductView .SingleProductView__cont-info .SingleProductView__cont-info-Bottom .SingleProductView_Size {
+  font-size: 20px;
+  padding: 10px 25px;
+  background: #9b7a69;
+  border-radius: 12px;
+  color: white;
+}
+.SingleProductView .SingleProductView__cont-info .SingleProductView__cont-info-Bottom .SingleProductView_Size span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.SingleProductView .SingleProductView__cont-info .SingleProductView__cont-info-Bottom h2 {
+  font-size: 30px;
 }
 
 .ProductsView__Title {

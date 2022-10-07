@@ -5,52 +5,66 @@
         <h1>{{singelProductGeted.precio}}</h1>
         <h1>{{singelProductGeted.category}}</h1> -->
     <div class="SingleProductView">
-
+    
         <div class="SingleProductView__container">
             <div class="SingleProductView__container-contImg">
                 <div class="SingleProductView__container-contImg-inside">
                     <img :src="'/imgs/Test/img-'+imgPrincipal+'.jpg'">
                 </div>
             </div>
-
-            <div class="SingleProductView__container-contPreview" >
-                <div class="SingleProductView__container-contPreview-contImg" 
-                    @click="changeImgPrincipal(1)" 
+    
+            <div class="SingleProductView__container-contPreview">
+                <div class="SingleProductView__container-contPreview-contImg" @click="changeImgPrincipal(1)"
                     :style="'background-color: '+backgroundColor[0]+';'">
                     <div class="SingleProductView__container-contPreview-img">
-                        <img src="/imgs/Test/img-1.jpg" >
+                        <img src="/imgs/Test/img-1.jpg">
                     </div>
                 </div>
-
-                <div class="SingleProductView__container-contPreview-contImg" 
-                @click="changeImgPrincipal(2)"
-                :style="'background-color: '+backgroundColor[1]+';'">
+    
+                <div class="SingleProductView__container-contPreview-contImg" @click="changeImgPrincipal(2)"
+                    :style="'background-color: '+backgroundColor[1]+';'">
                     <div class="SingleProductView__container-contPreview-img">
                         <img src="/imgs/Test/img-2.jpg">
                     </div>
                 </div>
-
-                <div class="SingleProductView__container-contPreview-contImg" 
-                @click="changeImgPrincipal(3)"
-                :style="'background-color: '+backgroundColor[2]+';'">
+    
+                <div class="SingleProductView__container-contPreview-contImg" @click="changeImgPrincipal(3)"
+                    :style="'background-color: '+backgroundColor[2]+';'">
                     <div class="SingleProductView__container-contPreview-img">
                         <img src="/imgs/Test/img-3.jpg">
                     </div>
                 </div>
-
-                <div class="SingleProductView__container-contPreview-contImg" 
-                @click="changeImgPrincipal(4)"
-                :style="'background-color: '+backgroundColor[3]+';'">
+    
+                <div class="SingleProductView__container-contPreview-contImg" @click="changeImgPrincipal(4)"
+                    :style="'background-color: '+backgroundColor[3]+';'">
                     <div class="SingleProductView__container-contPreview-img">
                         <img src="/imgs/Test/img-4.jpg">
                     </div>
                 </div>
-            </div>  
+            </div>
+        </div>
+
+        <div class="SingleProductView__cont-info">
+           <h1>Tittle</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.</p>
+           
+           <div class="SingleProductView__cont-info-Bottom">
+            <div class="SingleProductView_Size">
+                Talla: <span>M</span>
             </div>
 
-      
-        
+            <h2>
+                $18.99
+            </h2>
+           </div>
+
         </div>
+
+
+    
+    
+    
+    </div>
 </template>
 <script lang="ts" setup>
 import {ref} from 'vue'
