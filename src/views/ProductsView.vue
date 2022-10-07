@@ -1,10 +1,6 @@
 <template >
     <div>
             <h1 class="ProductsView__Title">{{params.category}}</h1>
-
-            
-        
-
         <CategoriesComponent :categoryRoute = "params.category"/>
     </div>
 </template>

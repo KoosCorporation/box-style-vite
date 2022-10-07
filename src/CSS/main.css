@@ -1,1 +1,177 @@
-*{margin:0px;padding:0px;box-sizing:border-box}body{font-family:sans-serif}h1{line-height:30px;font-family:sans-serif}h3{font-size:25px;font-weight:500;font-family:sans-serif;margin-top:0px}h4{font-size:20px;margin-bottom:5px;font-family:sans-serif}p{font-family:sans-serif;margin:0px}a{font-family:sans-serif}.router-link{text-decoration:none}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}.SingleProductView{width:100%;display:flex;justify-content:center;align-items:center;padding:10% 0}.SingleProductView .SingleProductView__container{width:95%;padding:5% 0;min-width:320px;max-width:600px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.5em}.SingleProductView .SingleProductView__container .SingleProductView__container-contImg,.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg{display:flex;justify-content:center;align-items:center;width:100%;padding:10% 0;border-radius:12px;box-shadow:8px 7px 5px -3px rgba(0,0,0,.16)}.SingleProductView .SingleProductView__container .SingleProductView__container-contImg .SingleProductView__container-contImg-inside,.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contImg-inside{width:90%;height:93%;background:#d7d1cb;border-radius:12px;display:flex;justify-content:center;align-items:center}.SingleProductView .SingleProductView__container .SingleProductView__container-contImg .SingleProductView__container-contImg-inside img,.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contImg-inside img{width:100%;height:450px;-o-object-fit:contain;object-fit:contain}.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview{display:flex;justify-content:space-between;flex-direction:row;align-items:center;width:95%;max-width:400px}.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg{padding:2%;width:auto;border-radius:7px}.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contPreview-img{width:auto;height:auto;background:#d7d1cb;padding:2%;border-radius:7px;display:flex;justify-content:center;align-items:center}.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contPreview-img img{width:70px;height:70px;-o-object-fit:contain;object-fit:contain}.ProductsView__Title{padding:35px 20px;font-size:50px}.categories__container{width:100vw;height:180px;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-wrap:wrap;gap:15px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}.categories__container::-webkit-scrollbar{display:none}.categories__container-item{display:flex;justify-content:center;align-items:center;width:150px;height:60px;background-color:#fff;border-radius:12px;white-space:nowrap;font-size:20px;font-weight:600;box-shadow:0px 8px 5px -4px rgba(0,0,0,.32)}/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  line-height: 30px;
+  font-family: sans-serif;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: sans-serif;
+  margin-top: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+}
+
+p {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+a {
+  font-family: sans-serif;
+}
+
+.router-link {
+  text-decoration: none;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.SingleProductView {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+}
+.SingleProductView .SingleProductView__container {
+  width: 95%;
+  padding: 5% 0;
+  min-width: 320px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contImg, .SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10% 0;
+  border-radius: 12px;
+  box-shadow: 8px 7px 5px -3px rgba(0, 0, 0, 0.16);
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contImg .SingleProductView__container-contImg-inside, .SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contImg-inside {
+  width: 90%;
+  height: 93%;
+  background: #d7d1cb;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contImg .SingleProductView__container-contImg-inside img, .SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contImg-inside img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 95%;
+  max-width: 400px;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg {
+  padding: 2%;
+  width: auto;
+  border-radius: 7px;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contPreview-img {
+  width: auto;
+  height: auto;
+  background: #d7d1cb;
+  padding: 2%;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SingleProductView .SingleProductView__container .SingleProductView__container-contPreview .SingleProductView__container-contPreview-contImg .SingleProductView__container-contPreview-img img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ProductsView__Title {
+  padding: 35px 20px;
+  font-size: 50px;
+}
+
+.categories__container {
+  width: 100vw;
+  height: 180px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.categories__container::-webkit-scrollbar {
+  display: none;
+}
+
+.categories__container-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  background-color: white;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0px 8px 5px -4px rgba(0, 0, 0, 0.32);
+}
+
+.CategoriesComponent_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 98%;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=main.css.map */

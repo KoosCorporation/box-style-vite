@@ -3,7 +3,6 @@
   
     <!-- Categories section -->
     <div class="categories__container">
-      
         <div class="categories__container-item"
         v-for="(category, index) in categoriesGeted.categoryValues"
         :key="index">
@@ -26,8 +25,7 @@
         v-for="(category, index) in categoriesGeted.categoryValues"
         :key="index">
           {{category}}
-        </div>
-        
+        </div>   
     </div>
 
 
