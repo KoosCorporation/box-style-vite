@@ -1,9 +1,5 @@
 <template>
   <div>
-    <h1>Filtro de categorias</h1>
-    <h1>{{ props.categoryRoute }}</h1>
-    <h1>categories geted {{ categoriesGeted.categoryValues }}</h1>
-    
   
     <!-- Categories section -->
     <div class="categories__container">
@@ -36,7 +32,7 @@
 
 
     <div class="CategoriesComponent_products">
-      <router-link
+      <router-link class="router-link"
         :to="`/Products/product/${product.id}`"
         v-for="(product, index) in productsGeted"
         :key="index"
@@ -46,6 +42,8 @@
     </div>
   </div>
 </template>
+
+
 <script lang="ts" setup>
 import { ref } from "vue";
 import { getProducts } from "../stores/products";
