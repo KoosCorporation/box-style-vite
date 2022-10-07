@@ -10,7 +10,7 @@
         <li  ><router-link to="/">INICIO</router-link></li>
         <li ><router-link to="/About">ABOUT</router-link></li>
       </div>
-      <div class="nav-links__container">
+      <div  class="nav-links__container">
         <div class="li-card">
           <li  ><router-link to = "/Products/Mujer">Mujer</router-link></li>
         </div>
@@ -20,23 +20,32 @@
         </div>
 
         <!-- Animated Category // -->
-        <div class="li-card__duo">
-          <li class="li-card__duo-tittle"><router-link to="/Products/Accesorios">Accesorios</router-link></li>
-          <div class="card-duo__child">
-            <a href="#" class="a-card__duo-child">Mujer</a> /
-            <a href="#" class="a-card__duo-child">Hombre</a>
-          </div>
+        <div class="li-card">
+          <li class="li-card-item"><div class="li-card-item" 
+                    to="/Products/Accesorios" 
+                    @click="displaySubCategoriesAccesories">Accesorios</div></li>
         </div>
-
+        <transition name="slide" >
+          <div class="li-card-sub" v-if="subCategoriesAccesories">
+            <li ><div to="/Products/Accesorios">Mujer</div></li>
+            <li class="li-card-sub-separator"></li>
+            <li ><div to="/Products/Accesorios">Hombre</div></li>
+          </div>
+        </transition>
+        
         <!-- Animated Category // -->
-        <div class="li-card__duo">
-          <li  class="li-card__duo-tittle"><router-link to="/Products/Calzado">Calzado</router-link></li>
-          <div class="card-duo__child">
-            <a href="#" class="a-card__duo-child">Mujer</a> /
-            <a href="#" class="a-card__duo-child">Hombre</a>
-          </div>
+        <div class="li-card">
+          <li ><div to="/Products/Calzado"
+                            @click="displaySubCategoriesCalzado">Calzado</div></li>
         </div>
-
+        <transition name="slide" >
+          <div class="li-card-sub" v-if="subCategoriesCalzado">
+            <li ><div to="/Products/Accesorios">Mujer</div></li>
+            <li class="li-card-sub-separator"></li>
+            <li ><div to="/Products/Accesorios">Hombre</div></li>
+          </div>
+        </transition>
+        
         <div class="li-card">
           <li ><router-link to="/Products/Thrift_Flip">Thrift Flip</router-link></li>
         </div>
@@ -83,14 +92,17 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import {ref} from 'vue'
 
 export default defineComponent({
 
 data(){
   return {
    navLinks: "nav-links",
-    toggle: "open",
-   isOpen: true,
+    toggle: ref("open"),
+   isOpen: ref(true),
+   subCategoriesAccesories: ref(false),
+   subCategoriesCalzado: ref(false)
   }
 },
 
@@ -103,15 +115,26 @@ methods: {
   } else {
     this.toggle = ""
     this.isOpen = false
+    this.subCategoriesAccesories = false
+    this.subCategoriesCalzado = false
   }
  },
+
+ displaySubCategoriesAccesories(){
+  if(this.subCategoriesAccesories) this.subCategoriesAccesories = false;
+  else this.subCategoriesAccesories = true; this.subCategoriesCalzado = false; 
+ },
+ displaySubCategoriesCalzado(){
+  if(this.subCategoriesCalzado) this.subCategoriesCalzado = false;
+  else this.subCategoriesCalzado = true; this.subCategoriesAccesories = false;
+ }
  
 },
 watch:{
   $route(newRoute, oldRoute){
     if (this.toggle == 'open'){
       this.Toggle()
-    }
+    } 
   }
 }
 
@@ -120,6 +143,17 @@ watch:{
 </script>
 <style lang="scss" scoped>
 @use '../SCSS/abstract' as *;
+
+// Sub categories styles
+.li-card-sub{
+  color: white;
+  padding: 5% 10%;
+  display: flex;
+  gap: 10%;
+  justify-content: space-around;
+  font-size: 18px;
+  
+}
 
 .nav-button {
   position: fixed;
@@ -180,6 +214,7 @@ nav {
   transform: translateY(-35px);
 
   z-index: 9;
+  
 }
 
 .nav-links.open {
@@ -221,6 +256,17 @@ nav {
   justify-content: center;
   border-bottom: solid rgba(255, 255, 255, 0.685) 1px;
   height: 40px;
+  transition: transform 0.4s ease-out;
+  color: white;
+}
+
+.li-card-sub-separator{
+  width: 2px;
+  height: 100%;
+  background-color: white;
+}
+.li-card-item{
+  transition: all 1s ease-out;
 }
 
 .li-card__duo {
@@ -231,7 +277,7 @@ nav {
   flex-wrap: wrap;
   border-bottom: solid rgba(255, 255, 255, 0.685) 1px;
   height: 40px;
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 .li-card__duo.cardBigger {
@@ -307,4 +353,18 @@ nav {
     width: 180px;
     justify-content: space-between;
 }
+
+// Animations to display sub categoies
+.slide-enter-active,
+.slide-leave-active {
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.slide-enter-from,
+
+.slide-leave-to {
+    opacity: 0;
+    transform: translateY(30%);
+}
+
 </style>

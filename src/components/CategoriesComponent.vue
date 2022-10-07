@@ -4,24 +4,37 @@
     <h1>{{ props.categoryRoute }}</h1>
     <h1>categories geted {{ categoriesGeted.categoryValues }}</h1>
     
+  
+    <!-- Categories section -->
     <div class="categories__container">
-      <!-- //Botones de Categoiras // -------------------------  -->
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <button class="categories-button">Pito</button>
-      <!-- <button
-        class="categories-button"
+      
+        <div class="categories__container-item"
         v-for="(category, index) in categoriesGeted.categoryValues"
-        :key="index"
-        @click="filtrando(category)"
-      >
-        {{ category }}
-      </button> -->
-      <!-- --------------------------------------------------- -->
+        :key="index">
+          {{category}}
+        </div>
+        
+        <!-- just for production to see how it looks with many items -->
+        <div class="categories__container-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+        <div class="categories__container-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
 
+        <div class="categories__container-item"
+        v-for="(category, index) in categoriesGeted.categoryValues"
+        :key="index">
+          {{category}}
+        </div>
+        
     </div>
+
+
     <div class="CategoriesComponent_products">
       <router-link
         :to="`/Products/product/${product.id}`"
@@ -67,25 +80,7 @@ const categoriesGeted = getProducts().getCategoryRoute(props.categoryRoute);
 
 <style lang="scss" scoped>
 
-.categories__container {
-  width: 100%;
-  height: 200px;
-  background: blue;
-  
-  overflow-x: scroll;
-  position: relative;
-}
 
-.categories-button {
-  width: 200px;
-  height: 70px;
-  background: red;
-}
-
-.CategoriesComponent_products {
-  display: grid;
-  grid-column: 2;
-}
 
 
 </style>
